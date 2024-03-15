@@ -133,8 +133,38 @@
                 case 'move':
                     response = 'File(s) moved.';
                     break;
+                 case 'help':
+                    response = 'Available commands:<br>' +
+                        'dir - Lists the files and directories<br>' +
+                        'cd - Changes the directory<br>' +
+                         'md/mkdir - Creates a new directory<br>' +
+                        'rd/rmdir - Removes a directory<br>' +
+                        'copy - Copies files<br>' +
+                        'xcopy - Copies files and directories<br>' +
+                        'del/erase - Deletes files<br>' +
+                        'type - Displays the contents of a file<br>' +
+                        'move - Moves files<br>' +
+                        'ren/rename - Renames files<br>' +
+                        'attrib - Changes file attributes<br>' +
+                        'format - Formats a disk<br>' +
+                        'chkdsk - Checks a disk<br>' +
+                        'diskcopy - Copies a floppy disk<br>' +
+                        'sys - Copies system files<br>' +
+                        'find - Searches for a text string in a file<br>' +
+                        'more - Displays one screen of output at a time<br>' +
+                        'tree - Displays the directory structure graphically<br>' +
+                        'label - Creates, changes, or deletes the volume label of a disk<br>' +
+                        'vol - Displays the disk volume label and serial number<br>' +
+                        'path - Displays or sets the search path for executable files<br>' +
+                        'exit - Exits the command interpreter<br>' +
+                        'pause - Suspends processing of a batch file and displays a message<br>' +
+                        'date - Displays or sets the date<br>' +
+                        'time - Displays or sets the system time<br>' +
+                        'echo - Turns command echoing on or off, or displays a message<br>' +
+                        'cls - Clears the screen<br>' +
+                        'help - Displays this help message<br>';
+                    break;
                 case 'ren':
-                case 'rename':
                     response = 'File(s) renamed.';
                     break;
                 case 'attrib':
