@@ -176,6 +176,15 @@
                 case 'chkdsk':
                     response = 'Disk checked.';
                     break;
+                case 'set':
+                    response = `Environment variable ${args.join(' ')} set.`;
+                    break;
+                case 'ping':
+                    response = `Pinging ${args.join(' ')}... (Simulated response)`;
+                    break;
+                case 'ipconfig':
+                    response = 'IP Configuration: IP 192.168.1.1, Subnet Mask 255.255.255.0, Default Gateway 192.168.1.254 (Simulated response)';
+                    break;
                 case 'diskcopy':
                     response = 'Floppy disk copied.';
                     break;
