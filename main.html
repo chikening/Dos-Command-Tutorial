@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOS Command Tutorial Website</title>
+    <link rel="stylesheet" href="maincs.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <span class="letter" style="--index: 1;">D</span>
+            <span class="letter" style="--index: 2;">O</span>
+            <span class="letter" style="--index: 3;">S</span>
+            <span class="space"></span>
+            <span class="space"></span>
+            <span class="letter" style="--index: 11;">M</span>
+            <span class="letter" style="--index: 12;">a</span>
+            <span class="letter" style="--index: 13;">s</span>
+            <span class="letter" style="--index: 14;">t</span>
+            <span class="letter" style="--index: 15;">e</span>
+            <span class="letter" style="--index: 16;">r</span>
+        </div>
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="tur.html">Tutorial</a></li>
+                <li><a href="commands.html">Command Reference</a></li>
+                <li><a href="cmd.html">Try It Out</a></li>
+                
+            </ul>
+        </nav>
+
+        
+    </header>
+    <nav class="hidden-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="tur.html">Tutorial</a></li>
+            <li><a href="commands.html">Command Reference</a></li>
+            <li><a href="cmd.html">Try It Out</a></li>
+        </ul>
+    </nav>  
+    <div class="content modern">
+        <h2 class="title">DOS - Disk Operating System Overview</h2>
+        <p>DOS, short for Disk Operating System, is a term used to describe a family of operating systems that were popular on IBM PC compatibles during the 1980s and early 1990s. The most widely used version, MS-DOS, developed by Microsoft, became the dominant operating system for personal computers before the rise of graphical operating systems like Microsoft Windows.</p>
+        <h3 class="subtitle">History</h3>
+        <p>The origins of DOS trace back to the early 1980s when IBM was entering the personal computer market. IBM contracted Microsoft to provide an operating system for its upcoming PC. Microsoft acquired QDOS (Quick and Dirty Operating System), which was developed by Tim Paterson of Seattle Computer Products, and transformed it into MS-DOS.</p>
+        <h3 class="subtitle">Impact on Computing</h3>
+        <p>DOS played a crucial role in the development of the personal computing industry. It was the foundation for many early computer applications and games, and its command line interface introduced many users to computer operation and programming. Even after the transition to graphical operating systems, DOS remains an important part of computer history and education.</p>
+        <iframe class="video" width="100%" height="515" src="https://www.youtube.com/embed/EbxukDnRqSQ?autoplay=1&mute=0"></iframe>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const hiddenNav = document.querySelector(".hidden-nav");
+        
+            menuToggle.addEventListener("click", function() {
+                hiddenNav.classList.toggle("show");
+            });
+        });
+        </script>
+
+        
+    <footer>
+        <p>&copy;  DOS MASTERS Command Tutorial.</p>
+        <p>Created by:</p>
+        <p>Ken Villaruel</p>
+        <p>Jonathan Bermas</p>
+        <p>Daeyam Dejaro</p>
+    </footer>
+        
+    
+</body>
+</html>

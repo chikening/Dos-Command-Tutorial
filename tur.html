@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Page</title>
+    <link rel="stylesheet" href="tur.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <span class="letter" style="--index: 1;">D</span>
+            <span class="letter" style="--index: 2;">O</span>
+            <span class="letter" style="--index: 3;">S</span>
+            <span class="space"></span>
+            <span class="space"></span>
+            <span class="letter" style="--index: 11;">M</span>
+            <span class="letter" style="--index: 12;">a</span>
+            <span class="letter" style="--index: 13;">s</span>
+            <span class="letter" style="--index: 14;">t</span>
+            <span class="letter" style="--index: 15;">e</span>
+            <span class="letter" style="--index: 16;">r</span>
+        </div>
+       
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="commands.html">Command Reference</a></li>
+                <li><a href="cmd.html">Try It Out</a></li>
+            </ul>
+        </nav>
+        <nav class="hidden-nav">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="tur.html">Tutorial</a></li>
+                <li><a href="commands.html">Command Reference</a></li>
+                <li><a href="cmd.html">Try It Out</a></li>
+            </ul>
+        
+    </header>
+
+   
+    
+    <main>
+        <!-- Section 1 -->
+        <section>
+            <h2>Getting Started</h2>
+            <p>Welcome to the interactive command line tutorial. If you've never used a command line interface before, don't worry! This section will introduce you to the basics of navigating and executing commands in our CMD environment.</p>
+            
+            <h3>Accessing the CMD Interface</h3>
+            <p>To start using the command line interface, navigate to our "Try It Out" page from the navigation menu. Once there, you'll see a simulated command line environment ready for your input.</p>
+            
+            <h3>Understanding the CMD Prompt</h3>
+            <p>The CMD prompt typically looks something like this: <code>C:\Users\DosMaster&gt;</code>. This prompt indicates your current directory. In this case, you're in the 'DosMaster' user directory. The '>' symbol is where you'll type your commands.</p>
+            
+            <h3>Basic Navigation Commands</h3>
+            <p>Let's go through some basic commands to get you started:</p>
+            <ul>
+                <li><code>dir</code> - Displays a list of files and directories in the current directory.</li>
+                <li><code>cd [directory name]</code> - Changes the current directory to the one specified. Replace "[directory name]" with the name of the directory you want to navigate to.</li>
+                <li><code>cls</code> - Clears the CMD screen of all previous commands and outputs, giving you a clean slate.</li>
+            </ul>
+            
+            <h3>Executing Your First Command</h3>
+            <p>Try executing the <code>dir</code> command in the CMD interface. This will display all the files and directories in your current location. To execute a command, type it after the prompt and press Enter.</p>
+            
+            <p>This is just the beginning of what you can do with the command line interface. As you become more comfortable with these basic commands, you'll find that the CMD can be a powerful tool for navigating and managing files on your computer.</p>
+        </section>
+        
+      
+        
+
+        <section>
+            <h2>Command Reference Guide</h2>
+            <p>As you become more familiar with the basic commands and start to explore more complex operations within the command line interface, having a detailed command reference guide becomes indispensable. This guide will serve as your go-to resource for understanding the syntax, options, and use cases for each command available in our CMD environment.</p>
+            
+            <p>The command reference includes explanations for commands beyond the basics covered in this tutorial, offering insights into more advanced functionalities like file permissions, process management, network utilities, and much more. Whether you're looking to execute a specific task or simply wish to expand your command line knowledge, the reference guide is an invaluable tool for all users.</p>
+            
+            <p><strong>Ready to dive deeper?</strong> Visit our <a href="#command-reference">Command Reference</a> section to explore the full list of commands and their detailed descriptions. Enhance your command line skills by understanding how to leverage the full potential of each command.</p>
+        </section>
+        
+        
+        <section>
+            <h2>Conclusion</h2>
+            <p>Now that you've learned the essentials of using the CMD interface, you're ready to explore on your own...</p>
+            <a href="cmd.html">Try It Out</a>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Footer from previous example -->
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const hiddenNav = document.querySelector(".hidden-nav");
+        
+            menuToggle.addEventListener("click", function() {
+                hiddenNav.classList.toggle("show");
+            });
+        });
+        </script>
+        
+</body>
+</html>

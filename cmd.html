@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive CMD</title>
+<link rel="stylesheet" href="cmd.css">
+</head>
+<body>
+<header>
+    <div id="logo">
+        <span class="letter" style="--index: 1;">D</span>
+        <span class="letter" style="--index: 2;">O</span>
+        <span class="letter" style="--index: 3;">S</span>
+        <span class="space"></span>
+        <span class="space"></span>
+        <span class="letter" style="--index: 11;">M</span>
+        <span class="letter" style="--index: 12;">a</span>
+        <span class="letter" style="--index: 13;">s</span>
+        <span class="letter" style="--index: 14;">t</span>
+        <span class="letter" style="--index: 15;">e</span>
+        <span class="letter" style="--index: 16;">r</span>
+    </div>
+    <nav>
+        <div class="menu-toggle">&#9776;</div>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="tur.html">Tutorial</a></li>
+            <li><a href="commands.html">Command Reference</a></li>
+            <li><a href="cmd.html">Try It Out</a></li>
+            
+        </ul>
+    </nav>
+    <nav class="hidden-nav">
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="tur.html">Tutorial</a></li>
+            <li><a href="commands.html">Command Reference</a></li>
+            <li><a href="cmd.html">Try It Out</a></li>
+        </ul>
+    
+
+
+</header>
+    <div id="cmd-container"> <!-- Container for CMD to control its size -->
+
+    <div id="cmd">
+        <div id="output"></div>
+        <div id="input-line" class="input-line">
+        
+        <div class="prompt">C:\Users\DosMaster&gt;</div><div><input type="text" id="cmd-input" autofocus></div>
+        </div>
+    </div>
+
+   </div>
+
+    
+   
+    </div>
+</footer>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const hiddenNav = document.querySelector(".hidden-nav");
+    
+    menuToggle.addEventListener("click", function() {
+        hiddenNav.classList.toggle("show");
+    });
+    
+    const cmdInput = document.getElementById('cmd-input');
+    const outputDiv = document.getElementById('output');
+
+    cmdInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const fullCommand = cmdInput.value.trim();
+            const [command, ...args] = fullCommand.split(/\s+/);
+            let response = '';
+
+            switch (command.toLowerCase()) {
+                case 'dir':
+                    response = 'Files and directories listed here.';
+                    if (args.includes('/p')) {
+                        response += ' (Paused after each screen)';
+                    }
+                    if (args.includes('/w')) {
+                        response += ' (Wide list format)';
+                    }
+                    if (args.includes('/s')) {
+                        response += ' (Listed files in specified directory and all subdirectories)';
+                    }
+                    break;
+                case 'cd':
+                    if (args.includes('..')) {
+                        response = 'Moved up one directory level.';
+                    } else if (args.length) {
+                        response = `Changed to directory ${args.join(' ')}.`;
+                    }
+                    break;
+                case 'md':
+                case 'mkdir':
+                    if (args.length) {
+                        response = `Directory ${args.join(' ')} created.`;
+                    }
+                    break;
+                case 'rd':
+                case 'rmdir':
+                    if (args.length) {
+                        response = `Directory ${args.join(' ')} removed.`;
+                        if (args.includes('/s')) {
+                            response += ' (All directories and files in the specified directory were also removed)';
+                        }
+                        if (args.includes('/q')) {
+                            response += ' (Quiet mode, did not ask for confirmation)';
+                        }
+                    }
+                    break;
+                case 'copy':
+                    response = 'File(s) copied.';
+                    break;
+                case 'xcopy':
+                    response = 'Files and directory trees copied.';
+                    break;
+                case 'del':
+                case 'erase':
+                    response = 'File(s) deleted.';
+                    break;
+                case 'type':
+                    response = 'Contents of a text file displayed here.';
+                    break;
+                case 'move':
+                    response = 'File(s) moved.';
+                    break;
+                case 'ren':
+                case 'rename':
+                    response = 'File(s) renamed.';
+                    break;
+                case 'attrib':
+                    response = 'File attributes changed.';
+                    break;
+                case 'format':
+                    response = 'Disk formatted.';
+                    break;
+                case 'chkdsk':
+                    response = 'Disk checked.';
+                    break;
+                case 'diskcopy':
+                    response = 'Floppy disk copied.';
+                    break;
+                case 'sys':
+                    response = 'System files copied.';
+                    break;
+                case 'find':
+                    response = 'Searched for a text string in a file.';
+                    break;
+                case 'more':
+                    response = 'Displayed one screen of output at a time.';
+                    break;
+                case 'tree':
+                    response = 'Graphically displayed the directory structure.';
+                    break;
+                case 'label':
+                    response = 'Volume label of a disk created, changed, or deleted.';
+                    break;
+                case 'vol':
+                    response = 'Disk volume label and serial number displayed.';
+                    break;
+                case 'path':
+                    response = 'Search path for executable files displayed or set.';
+                    break;
+                case 'exit':
+                    response = 'Command interpreter exited.';
+                    break;
+                case 'pause':
+                    response = 'Suspended processing of a batch file and displayed a message.';
+                    break;
+                case 'date':
+                    response = 'Date displayed or set.';
+                    break;
+                case 'time':
+                    response = 'System time displayed or set.';
+                    break;
+                case 'echo':
+                    if (args[0]?.toLowerCase() === 'on') {
+                        response = 'Command echoing turned on.';
+                    } else if (args[0]?.toLowerCase() === 'off') {
+                        response = 'Command echoing turned off.';
+                    } else {
+                        response = args.join(' ');
+                    }
+                    break;
+                case 'cls':
+                    outputDiv.innerHTML = '';
+                    cmdInput.value = '';
+                    return; // Clears the screen and waits for the next input
+                default:
+                    response = 'Command not recognized.';
+                    break;
+            }
+
+            // Append the command and response to the output div
+            outputDiv.innerHTML += `C:\\Users\\DosMaster&gt; ${fullCommand}<br>${response}<br>`;
+            cmdInput.value = '';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

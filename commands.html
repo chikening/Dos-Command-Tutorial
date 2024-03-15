@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOS Command Tutorial Website</title>
+    <link rel="stylesheet" href="commands.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <span class="letter" style="--index: 1;">D</span>
+            <span class="letter" style="--index: 2;">O</span>
+            <span class="letter" style="--index: 3;">S</span>
+            <span class="space"></span>
+            <span class="space"></span>
+            <span class="letter" style="--index: 11;">M</span>
+            <span class="letter" style="--index: 12;">a</span>
+            <span class="letter" style="--index: 13;">s</span>
+            <span class="letter" style="--index: 14;">t</span>
+            <span class="letter" style="--index: 15;">e</span>
+            <span class="letter" style="--index: 16;">r</span>
+        </div>
+        <nav>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="tur.html">Tutorial</a></li>
+                <li><a href="commands.html">Command Reference</a></li>
+                <li><a href="cmd.html">Try It Out</a></li>
+                
+            </ul>
+        </nav>
+
+        <nav class="hidden-nav">
+          
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="tur.html">Tutorial</a></li>
+                <li><a href="commands.html">Command Reference</a></li>
+                <li><a href="cmd.html">Try It Out</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+<table>
+  <tr>
+    <th>Command</th>
+    <th>Description</th>
+    <th>Attributes</th>
+  </tr>
+  <tr>
+    <td>DIR</td>
+    <td>Lists the files and directories in the current directory.</td>
+    <td>/W (wide list format), /P (pause after each screen of information), /S (lists files in specified directory and all subdirectories).</td>
+  </tr>
+  <tr>
+    <td>CD (CHDIR)</td>
+    <td>Changes the current directory.</td>
+    <td>.. (moves up one directory level), &lt;directory name&gt; (navigates to a specific directory).</td>
+  </tr>
+  <tr>
+    <td>MD (MKDIR)</td>
+    <td>Creates a new directory.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>RD (RMDIR)</td>
+    <td>Removes a directory.</td>
+    <td>/S (removes all directories and files in the specified directory in addition to the directory itself), /Q (quiet mode, does not ask for confirmation).</td>
+  </tr>
+  <tr>
+    <td>COPY</td>
+    <td>Copies one or more files to another location.</td>
+    <td>/Y (suppresses prompting to confirm you want to overwrite an existing destination file), /V (verifies that new files are written correctly).</td>
+  </tr>
+  <tr>
+    <td>XCOPY</td>
+    <td>Copies files and directory trees.</td>
+    <td>/E (copies directories and subdirectories, including empty ones), /I (if in doubt always assume the destination is a folder), /H (copies hidden and system files also).</td>
+  </tr>
+  <tr>
+    <td>DEL (ERASE)</td>
+    <td>Deletes one or more files.</td>
+    <td>/P (prompts for confirmation before deleting each file), /F (forces deletion of read-only files).</td>
+  </tr>
+  <tr>
+    <td>TYPE</td>
+    <td>Displays the contents of a text file.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>EDIT</td>
+    <td>Starts the MS-DOS Editor, a text editor used to create and edit ASCII text files.</td>
+    <td>No specific attributes. (Not available in 64-bit versions of Windows).</td>
+  </tr>
+  <tr>
+    <td>MOVE</td>
+    <td>Moves one or more files from one directory to another directory.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>REN (RENAME)</td>
+    <td>Renames a file or files.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>ATTRIB</td>
+    <td>Changes or views the attributes of one or more files.</td>
+    <td>+R (sets the read-only file attribute), -R (clears the read-only file attribute), +H (sets the hidden file attribute), etc.</td>
+  </tr>
+  <tr>
+    <td>FORMAT</td>
+    <td>Formats a disk for use with DOS.</td>
+    <td>/Q (quick format), /FS (specifies the file system).</td>
+  </tr>
+  <tr>
+    <td>CHKDSK</td>
+    <td>Checks a disk and displays a status report.</td>
+    <td>/F (fixes errors on the disk), /R (locates bad sectors and recovers readable information).</td>
+  </tr>
+  <tr>
+    <td>DISKCOPY</td>
+    <td>Copies the contents of one floppy disk to another.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>SYS</td>
+    <td>Copies DOS system files and command interpreter to a disk.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>FIND</td>
+    <td>Searches for a text string in a file or files.</td>
+    <td>/I (ignores the case of characters when searching), /N (displays line numbers with the displayed lines).</td>
+  </tr>
+  <tr>
+    <td>MORE</td>
+    <td>Displays one screen of output at a time.</td>
+    <td>Used in conjunction with another command, e.g., DIR | MORE.</td>
+  </tr>
+  <tr>
+    <td>TREE</td>
+    <td>Graphically displays the directory structure of a drive or path.</td>
+    <td>/F (displays the names of the files in each directory), /A (uses ASCII characters).</td>
+  </tr>
+  <tr>
+    <td>XCOPY32</td>
+    <td>Same as XCOPY, used in older versions of DOS/Windows.</td>
+    <td>Attributes are similar to XCOPY.</td>
+  </tr>
+  <tr>
+    <td>LABEL</td>
+    <td>Creates, changes, or deletes the volume label of a disk.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>VOL</td>
+    <td>Displays a disk volume label and serial number.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>PATH</td>
+    <td>Displays or sets a search path for executable files.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>EXIT</td>
+    <td>Quits the CMD.EXE program (command interpreter) or the current batch script.</td>
+    <td>No specific attributes.</td>
+  </tr>
+  <tr>
+    <td>PAUSE</td>
+    <td>Suspends processing of a batch file and displays a message.</td>
+    <td>Often used to prompt the user for input.</td>
+  </tr>
+  <tr>
+    <td>DATE</td>
+    <td>Displays or sets date</td>
+    <td>No specific Attribrutes</td>
+  </tr>
+
+  <tr>
+    <td>Help</td>
+    <td>Displays all Commands Available </td>
+    <td>No specific Attribrutes</td>
+  </tr>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const hiddenNav = document.querySelector(".hidden-nav");
+    
+        menuToggle.addEventListener("click", function() {
+            hiddenNav.classList.toggle("show");
+        });
+    });
+</script>
+
+</body>
+</html>
